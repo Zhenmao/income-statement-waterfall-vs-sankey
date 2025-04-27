@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+svg,
+canvas,
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+a {
+  color: currentColor;
+}
+
+:root {
+  --color-background: #ffffff;
+  --color-text: #212529;
+  --color-profit: #37b24d;
+  --color-cost: #f03e3e;
+  --color-summary: #495057;
+  --color-revenue: #495057;
+
+  --font-size-vis: 1rem;
+  --font-size-body: 1rem;
+  --font-size-figcaption: 1.563rem;
+  --font-size-heading: 2.441rem;
+}
+
+@media screen and (min-width: 48rem) {
+  :root {
+    --font-size-body: 1.25rem;
+    --font-size-heading: 3.052rem;
+  }
+}
+
+body {
+  font-family: "Asap Condensed", sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums lining-nums;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: var(--font-size-heading);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+figcaption {
+  font-size: var(--font-size-figcaption);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-block-end: 1rem;
+}
+
+main {
+  width: min(100% - 2rem, 90rem);
+  margin: 2rem auto;
+}
+
+figure {
+  padding-block: 2rem;
+  font-size: var(--font-size-vis);
+}
+
+text {
+  fill: currentColor;
+}
+
+@media screen and (min-width: 64rem) {
+  section {
+    display: grid;
+    grid-template-columns: 25rem 1fr;
+    gap: 2rem;
+  }
+
+  .table {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+  }
+}
+
+main > * + * {
+  margin-block-start: 2rem;
+}
+
+.intro > * + * {
+  margin-block-start: 1rem;
+}
+
+.table table {
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.25em 0.5em;
+  font-weight: 400;
+  position: relative;
+}
+
+.table th {
+  text-align: left;
+}
+
+.table td {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25em;
+}
+
+.table td::before {
+  content: "$";
+}
+
+/* Use pseudo elements instead of borders to keep all table rows the same height  */
+.table tr[data-total] th::after,
+.table tr[data-total] td::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.table tr[data-total] th {
+  font-weight: 700;
+}
+
+.wrapper {
+  overflow-x: auto;
+}
+
+.chart {
+  width: 100%;
+  min-width: 800px;
+  height: auto;
+}

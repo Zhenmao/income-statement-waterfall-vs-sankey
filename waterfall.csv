@@ -1,0 +1,19 @@
+Row,Item,Amount,Type,Summary Rows,Summary Action
+1,iPhone,69138,Profit,,
+2,Mac,8987,Profit,,
+3,iPad,8088,Profit,,
+4,"Wearables, Home and Accessories",11747,Profit,,
+5,Services,26340,Profit,,
+6,Revenue,124300,Summary,"1,2,3,4,5",Add
+7,Products cost,59447,Cost,,
+8,Services cost,6578,Cost,,
+9,Cost of revenue,66025,Summary,"7,8",Add
+10,Gross margin,58275,Summary,"6,9",Subtract
+11,R&D,8268,Cost,,
+12,SG&A,7175,Cost,,
+13,Operating expenses,15443,Summary,"11,12",Add
+14,Operating income,42832,Summary,"10,13",Subtract
+15,Other expense,248,Cost,,
+16,Income before taxes,42584,Summary,"14,15",Subtract
+17,Provision for income taxes,6254,Cost,,
+18,Net income,36330,Summary,"16,17",Subtract

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Statement Waterfall vs. Sankey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div></div>
+        <div class="intro">
+          <h1>Income Statement Waterfall vs. Sankey</h1>
+          <p
+            >An income statement shows a company's revenues and expenses in a
+            given reporting period, usually quarterly or yearly. It's also known
+            as a profit and loss (P&L) statement.</p
+          >
+          <p
+            >At its basic form, it's a table with two columns. The left column
+            contains a detailed breakdown of individual revenues and expenses.
+            The right columns contains the amount of each item.</p
+          >
+          <p
+            >Traditionally, a waterfall chart is commonly used to visualize an
+            income statement. In recent years, using a
+            <a
+              href="https://www.sankeyart.com/sankeys/public/59370/"
+              target="_blank"
+              >Sankey diagram</a
+            >
+            has been trending.</p
+          >
+          <p
+            >Below, we're going to comparing these two methods by visualizing
+            the same
+            <a
+              href="https://www.apple.com/newsroom/pdfs/fy2025-q1/FY25_Q1_Consolidated_Financial_Statements.pdf"
+              target="_blank"
+              >Apple Q1 FY25 income statement</a
+            >.</p
+          >
+        </div>
+      </section>
+      <section class="compare">
+        <figure class="table">
+          <figcaption>Apple Q1 FY25 Income Statement</figcaption>
+          <table>
+            <tbody>
+              <tr>
+                <th>iPhone</th>
+                <td>69,138M</td>
+              </tr>
+              <tr>
+                <th>Mac</th>
+                <td>8,987M</td>
+              </tr>
+              <tr>
+                <th>iPad</th>
+                <td>8,088M</td>
+              </tr>
+              <tr>
+                <th>Wearables, Home and Accessories</th>
+                <td>11,747M</td>
+              </tr>
+              <tr>
+                <th>Services</th>
+                <td>26,340M</td>
+              </tr>
+              <tr data-total>
+                <th>Revenue</th>
+                <td>124,300M</td>
+              </tr>
+              <tr>
+                <th>Products cost</th>
+                <td>59,447M</td>
+              </tr>
+              <tr>
+                <th>Services cost</th>
+                <td>6,578M</td>
+              </tr>
+              <tr data-total>
+                <th>Cost of revenue</th>
+                <td>66,025M</td>
+              </tr>
+              <tr data-total>
+                <th>Gross margin</th>
+                <td>58,275M</td>
+              </tr>
+              <tr>
+                <th><abbr title="Research and development">R&D</abbr></th>
+                <td>8,268M</td>
+              </tr>
+              <tr>
+                <th
+                  ><abbr title="Selling, general and administrative"
+                    >SG&A</abbr
+                  ></th
+                >
+                <td>7,175M</td>
+              </tr>
+              <tr data-total>
+                <th>Operating expenses</th>
+                <td>15,443M</td>
+              </tr>
+              <tr data-total>
+                <th>Operating income</th>
+                <td>42,832M</td>
+              </tr>
+              <tr>
+                <th>Other expense</th>
+                <td>248M</td>
+              </tr>
+              <tr data-total>
+                <th>Income before taxes</th>
+                <td>42,584M</td>
+              </tr>
+              <tr>
+                <th>Provision for income taxes</th>
+                <td>6,254M</td>
+              </tr>
+              <tr data-total>
+                <th>Net income</th>
+                <td>36,330M</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+        <div class="visualizations">
+          <figure class="waterfall">
+            <figcaption>Waterfall Chart</figcaption>
+            <div class="wrapper">
+              <svg id="waterfall" class="chart"></svg>
+            </div>
+          </figure>
+          <figure class="sankey">
+            <figcaption>Sankey Diagram</figcaption>
+            <div class="wrapper">
+              <svg id="sankey" class="chart"></svg>
+            </div>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

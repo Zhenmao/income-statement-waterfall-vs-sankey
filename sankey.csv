@@ -1,0 +1,18 @@
+Source,Target,Amount,Type
+iPhone,Products,69138,Revenue
+Mac,Products,8987,Revenue
+iPad,Products,8088,Revenue
+"Wearables, Home and Accessories",Products,11747,Revenue
+Products,Revenue,97960,Revenue
+Services,Revenue,26340,Revenue
+Revenue,Gross margin,58275,Profit
+Revenue,Cost of revenue,66025,Cost
+Gross margin,Operating income,42832,Profit
+Gross margin,Operating expenses,15443,Cost
+Cost of revenue,Products cost,59447,Cost
+Cost of revenue,Services cost,6578,Cost
+Operating income,Net income,36330,Profit
+Operating income,Provision for income taxes,6254,Cost
+Operating income,Other expense,248,Cost
+Operating expenses,R&D,8268,Cost
+Operating expenses,SG&A,7175,Cost
