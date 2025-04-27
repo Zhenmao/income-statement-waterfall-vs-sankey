@@ -8,9 +8,9 @@ export default function sankey({ svg, data, color }) {
     marginBottom = 0,
     marginLeft = 0;
 
-  const height = 640;
-  const nodeWidth = 36;
-  const nodePadding = 24;
+  const height = 480;
+  const nodeWidth = 24;
+  const nodePadding = 64;
   const textOffset = 8;
   const labelPadding = 4;
   const labelBorderRadius = 4;
